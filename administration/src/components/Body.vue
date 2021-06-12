@@ -17,6 +17,19 @@
                             </button>
                         </div>
                     </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Suivi du service
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Commandes en attente : <b>0</b></li>
+                            <li class="list-group-item">Nombre de tables : <b>0</b></li>
+                            <li class="list-group-item">Système : 
+                                <span class="badge badge-success">CONNECTÉ</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="col-md-8">
