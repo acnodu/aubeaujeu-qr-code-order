@@ -14,6 +14,10 @@
                     <div class="form-group">
                         <button class="btn btn-lg btn-success btn-block" type="submit">Se connecter</button>
                     </div>
+
+                    <div class="alert alert-danger" role="alert" v-if="error">
+                        Utilisateur introuvable !
+                    </div>
                 </form>
             </div>
         </div>
@@ -23,12 +27,19 @@
 <script>
 export default {
     name: 'TablesVue',
+    data() {
+		return {
+			error: false
+		}
+	},
     methods:{
         login() {
             if( this.$refs.username.value == 'suicide' &&
                 this.$refs.password.value == 'mort'    ){
-
+                this.error = false
                 this.$emit('is_logged', true)
+            }else{ 
+                this.error = true 
             }
         }
     }

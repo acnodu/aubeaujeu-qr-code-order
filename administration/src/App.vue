@@ -2,7 +2,10 @@
 	<div v-if="logged">
 		<HeaderVue></HeaderVue>
 
-		<BodyVue></BodyVue>
+		<BodyVue
+			v-bind:logged="logged"
+			v-bind:imprimantes="imprimantes">
+		</BodyVue>
 	</div>
 
 	<div v-else>
@@ -27,7 +30,19 @@ export default {
 	},
 	data() {
 		return {
-			logged: false
+			logged: true,
+			imprimantes: [
+				{
+					name: 'Accueil',
+					ip: '102.120.23.41',
+					port: '340'
+				},
+				{
+					name: 'Bar',
+					ip: '102.120.23.44',
+					port: '345'
+				}
+			]
 		}
 	},
 	methods:{

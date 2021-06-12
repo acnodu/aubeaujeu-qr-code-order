@@ -52,7 +52,8 @@
                             <ConsommationsVue />
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <ParametresVue />
+                            <ParametresVue
+                                v-bind:imprimantes="imprimantes"/>
                         </div>
                     </div>
                 </div>
@@ -72,7 +73,8 @@ export default {
 		TablesVue,
         ConsommationsVue,
         ParametresVue
-	}
+	},
+    props: ['logged', 'imprimantes']
 }
 </script>
 
